@@ -30,5 +30,6 @@ azure-nsg-lab/
 ├── docs/
 │   ├── architecture.md           # topology overview and design decisions
 │   └── traffic-verification.md   # test commands, outputs, and rule explanations
-└──  screenshots/
+├── screenshots/
+└──  scripts/
 ```
