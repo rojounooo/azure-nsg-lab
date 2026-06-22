@@ -73,7 +73,7 @@ curl http://20.91.212.124
 **Expected:** nginx default page returned — permitted by `nsg-web` rule `Allow-HTTP`  
 **Result:** Success
 
-![HTTP to vm-web](../screenshots/03-nginx-curl-public-ip.png)
+![HTTP to vm-web](../screenshots/http-traffic-vm-web.png)
 
 ---
 
@@ -87,7 +87,7 @@ ping -c 4 10.0.2.4
 **Expected:** Ping succeeds — source IP `10.0.1.x` matches `nsg-data` rule `Allow-From-Web-Subnet`  
 **Result:** Success
 
-![vm-web to vm-data](../screenshots/04-vm-web-to-vm-data-ping.png)
+![vm-web to vm-data](../screenshots/traffic-from-web-to-data.png)
 
 ---
 
@@ -101,7 +101,7 @@ curl --connect-timeout 10 http://example.com
 **Expected:** Response received — `snet-web` has no outbound internet deny rule  
 **Result:** Success
 
-![vm-web internet egress](../screenshots/05-vm-web-internet-egress.png)
+![vm-web internet egress](../screenshots/vm-web-internet-egress.png)
 
 ---
 
@@ -115,18 +115,5 @@ curl --connect-timeout 10 http://example.com
 **Expected:** Connection times out — blocked by `nsg-data` rule `Deny-Internet-Outbound`  
 **Result:** Failed — connection timed out
 
-![vm-data internet denied](../screenshots/06-vm-data-internet-denied.png)
+![vm-data internet denied](../screenshots/vm-data-internet-egress.png)
 
----
-
-## Effective Security Rules
-
-### vm-web NIC
-
-![Effective rules vm-web](../screenshots/07-effective-rules-vm-web.png)
-
----
-
-### vm-data NIC
-
-![Effective rules vm-data](../screenshots/08-effective-rules-vm-data.png)
