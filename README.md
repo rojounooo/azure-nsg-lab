@@ -6,7 +6,7 @@ A hands-on Azure lab demonstrating Network Security Group (NSG) design, subnet s
 
 This lab provisions a Virtual Network (`vnet-nsg-lab`) in Sweden Central with two subnets — a web tier (`snet-web`) and a data tier (`snet-data`). Each subnet has a dedicated NSG with rules that enforce strict traffic control: the web tier accepts inbound HTTP/HTTPS from the internet and SSH from a management IP only, while the data tier accepts traffic exclusively from the web subnet and is fully isolated from the internet.
 
-The lab covers NSG rule design, subnet-level NSG association, effective security rule auditing, and systematic traffic verification using both manual tests and Azure Network Watcher.
+The lab covers NSG rule design, subnet-level NSG association, effective security rule auditing, and systematic traffic verification using manual tests.
 
 ## Notes
 
