@@ -10,17 +10,17 @@ The lab covers NSG rule design, subnet-level NSG association, effective security
 
 ## Notes
 
-**Note:** Sweden Central used because the B-series VMs are unavailable in UK South under the Free Tier. 
+- Sweden Central used because the B-series VMs are unavailable in UK South under the Free Tier. 
 
-**Note:** NSGs attached at the subnet level enforce rules consistently across all VMs in that subnet without relying on per-NIC configuration — this is the preferred enterprise pattern.
+- NSGs attached at the subnet level enforce rules consistently across all VMs in that subnet without relying on per-NIC configuration — this is the preferred enterprise pattern.
 
-**Note:** NSGs are stateful, so allowing inbound traffic on a port implicitly allows the return traffic without needing a separate outbound rule.
+- NSGs are stateful, so allowing inbound traffic on a port implicitly allows the return traffic without needing a separate outbound rule.
 
-**Note:** A VM with no public IP cannot be reached directly from the internet regardless of NSG rules — the two controls are independent layers of defence.
+- A VM with no public IP cannot be reached directly from the internet regardless of NSG rules — the two controls are independent layers of defence.
 
-**Note:** Using cloud shell to create VMs with SSH Key Authentication can cause problems on Windows hosts. I used passwords and then added SSH auth later.
+- Using cloud shell to create VMs with SSH Key Authentication can cause problems on Windows hosts. I used passwords and then added SSH auth later.
 
-**Note:** For cleanup, simply delete the resource group via Portal, CLI or Powershell
+- For cleanup, simply delete the resource group via Portal, CLI or Powershell
 
 ## Repo structure
 
